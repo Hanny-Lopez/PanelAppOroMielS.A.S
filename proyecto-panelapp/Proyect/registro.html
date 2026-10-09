@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#df612b">
+  <title>Crear cuenta de prueba | Panela Oro Miel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header data-site-header></header>
+  <main class="container section narrow auth-page">
+    <p class="eyebrow">Únete a PanelApp</p>
+    <h1>Crear cuenta local</h1>
+    <p class="auth-intro">Regístrate para acceder al catálogo y a las herramientas de demostración.</p>
+
+    <!-- Registro local: los permisos se muestran para probar los dos tipos de experiencia. -->
+    <form class="form card" data-auth-form data-action="register">
+      <label>Nombre completo<input name="nombre" required maxlength="120" autocomplete="name"></label>
+      <label>Correo electrónico<input name="correo" type="email" required maxlength="190" autocomplete="email"></label>
+      <label>Contraseña
+        <input name="password" type="password" required minlength="8" autocomplete="new-password">
+        <small>Usa al menos 8 caracteres. No reutilices una contraseña personal.</small>
+      </label>
+      <input type="hidden" name="rol" value="CLIENTE">
+      <p class="notice">El registro público crea cuentas de cliente. La cuenta de administrador se configura desde la computadora del servidor.</p>
+      <button class="button" type="submit">Crear cuenta y continuar</button>
+      <p class="notice" aria-live="polite"></p>
+    </form>
+    <p class="auth-register">¿Ya tienes cuenta? <a href="login.html">Ingresar</a></p>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>

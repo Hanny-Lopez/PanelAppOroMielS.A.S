@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#df612b">
+  <title>Carrito y pedidos | PanelApp</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header data-site-header></header>
+  <main class="container section">
+    <p class="eyebrow">Tu compra</p>
+    <h1>Carrito y pedidos</h1>
+    <p class="muted">Revisa tu selección y confirma los productos antes de crear el pedido.</p>
+    <section data-order-products class="product-grid" aria-label="Productos disponibles"></section>
+    <section class="card cart-summary" data-cart-summary aria-live="polite">
+      <h2>Resumen de tu carrito</h2>
+      <div data-cart-lines><p class="muted">Agrega productos desde el catálogo para comenzar.</p></div>
+      <p class="cart-total"><span>Total estimado</span><strong data-cart-total>$ 0</strong></p>
+    </section>
+    <label class="delivery-field" data-address-label hidden>Dirección de entrega<input data-delivery-address maxlength="255" autocomplete="street-address" placeholder="Calle, número, barrio y ciudad" required></label>
+    <div class="checkout-actions"><button class="button" data-create-order hidden>Confirmar pedido</button></div>
+    <div class="table-wrap">
+      <table><thead><tr><th>Pedido</th><th>Cliente</th><th>Total</th><th>Fecha</th><th>Estado</th><th>Detalle / acción</th></tr></thead><tbody data-order-table></tbody></table>
+    </div>
+    <p class="notice" aria-live="polite"></p>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>

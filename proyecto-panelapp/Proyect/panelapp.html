@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PanelApp | Panela Oro Miel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header data-site-header></header>
+  <main class="container section">
+    <p class="eyebrow">Herramientas para comprar y gestionar</p>
+    <h1>PanelApp</h1>
+    <p class="hero-copy">Un espacio de demostración para explorar el catálogo y organizar pedidos de Panela Oro Miel.</p>
+
+    <!-- Funciones visibles para cada tipo de cuenta. -->
+    <div class="cards">
+      <article class="card">
+        <h2>Cliente</h2>
+        <ul>
+          <li>Consultar catálogo y disponibilidad.</li>
+          <li>Armar un carrito y confirmar un pedido de prueba.</li>
+          <li>Registrar una solicitud de pago para revisión.</li>
+          <li>Consultar estados de entrega registrados.</li>
+        </ul>
+        <a class="button" href="login.html?rol=CLIENTE">Ingresar como cliente</a>
+      </article>
+      <article class="card">
+        <h2>Administrador</h2>
+        <ul>
+          <li>Crear, editar y desactivar productos.</li>
+          <li>Consultar pedidos de clientes y gestionar sus estados.</li>
+          <li>Revisar clientes y solicitudes de pago.</li>
+          <li>Consultar indicadores e imprimir el reporte.</li>
+        </ul>
+        <a class="button button-light" href="login.html?rol=ADMIN">Ingresar como administrador</a>
+      </article>
+    </div>
+    <p class="report-disclaimer">PanelApp es una demostración local: cuentas, pedidos y productos se guardan en este navegador, sin pagos reales ni sincronización entre equipos.</p>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clientes | Administración Oro Miel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header data-site-header></header>
+  <main class="container section">
+    <p class="eyebrow">Administración</p>
+    <h1>Clientes registrados</h1>
+    <p class="muted">Consulta las cuentas de cliente y sus pedidos asociados.</p>
+
+    <!-- Crear o editar el perfil básico de un cliente desde el panel. -->
+    <form class="form card" data-client-form>
+      <input type="hidden" name="id">
+      <h2 data-client-form-title>Crear cuenta de cliente</h2>
+      <div class="product-fields-row">
+        <label>Nombre<input name="nombre" required maxlength="120"></label>
+        <label>Correo electrónico<input name="correo" type="email" required maxlength="190"></label>
+      </div>
+      <div class="product-fields-row">
+        <label>Teléfono<input name="telefono" maxlength="40"></label>
+        <label>Dirección<input name="direccion" maxlength="255"></label>
+      </div>
+      <label data-client-password>Contraseña inicial
+        <input name="password" type="password" minlength="12" autocomplete="new-password" required>
+        <small>Mínimo 12 caracteres. Solo se solicita al crear la cuenta.</small>
+      </label>
+      <div class="admin-actions">
+        <button class="button" type="submit">Crear cliente</button>
+        <button class="button button-light" type="reset">Limpiar</button>
+      </div>
+      <p class="notice" aria-live="polite"></p>
+    </form>
+
+    <!-- Tabla conectada al CRUD PHP de usuarios/clientes. -->
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Nombre</th><th>Correo</th><th>Teléfono</th><th>Dirección</th><th>Estado</th><th>Pedidos</th><th>Acciones</th></tr></thead>
+        <tbody data-client-table></tbody>
+      </table>
+    </div>
+    <p class="notice" aria-live="polite"></p>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>

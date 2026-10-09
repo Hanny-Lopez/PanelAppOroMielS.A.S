@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pagos | PanelApp Oro Miel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header data-site-header></header>
+  <main class="container section">
+    <p class="eyebrow">Compra segura y clara</p>
+    <h1>Pagos registrados</h1>
+    <p class="report-disclaimer">Esta versión solo registra solicitudes para revisión del administrador. No procesa cobros ni pagos en línea.</p>
+
+    <!-- Formulario habilitado por JavaScript únicamente para la sesión cliente. -->
+    <form class="form card" data-payment-request hidden>
+      <h2>Solicitar registro de pago</h2>
+      <label>Pedido<select name="pedido_id" required></select></label>
+      <label>Método de pago
+        <select name="metodo">
+          <option value="EFECTIVO">Efectivo</option>
+          <option value="TRANSFERENCIA">Transferencia</option>
+          <option value="PSE">PSE (simulado)</option>
+          <option value="TARJETA">Tarjeta (simulado)</option>
+          <option value="CONTRAENTREGA">Contraentrega</option>
+        </select>
+      </label>
+      <button class="button" type="submit">Registrar solicitud</button>
+      <p class="notice" aria-live="polite"></p>
+    </form>
+
+    <!-- El administrador puede revisar solicitudes y actualizar su estado. -->
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Pago</th><th>Pedido</th><th>Cliente</th><th>Monto</th><th>Método</th><th>Estado</th><th>Acción admin</th></tr></thead>
+        <tbody data-payment-table></tbody>
+      </table>
+    </div>
+    <p class="notice" aria-live="polite"></p>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>

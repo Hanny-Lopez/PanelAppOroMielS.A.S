@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#df612b">
+  <title>Seguimiento de pedidos | PanelApp</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header data-site-header></header>
+  <main class="container section">
+    <p class="eyebrow">Acompañamos tu compra</p>
+    <h1>Seguimiento de pedidos</h1>
+    <p class="muted">Consulta el último estado registrado. Esta demo no cuenta con GPS ni actualización en tiempo real entre dispositivos.</p>
+
+    <!-- Tarjetas de seguimiento para el cliente y la administración. -->
+    <section class="tracking-grid" data-tracking-cards aria-live="polite"></section>
+
+    <!-- El administrador puede editar dirección, fecha y estado de entrega. -->
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Entrega</th><th>Pedido</th><th>Cliente</th><th>Dirección</th><th>Fecha programada</th><th>Estado</th><th>Acción</th></tr></thead>
+        <tbody data-delivery-table></tbody>
+      </table>
+    </div>
+    <p class="notice" aria-live="polite"></p>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>

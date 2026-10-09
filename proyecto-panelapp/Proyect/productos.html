@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#df612b">
+  <title>Catálogo de panela | Panela Oro Miel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header data-site-header></header>
+  <main class="container section">
+    <p class="eyebrow">Selección Oro Miel</p>
+    <h1>Catálogo de productos</h1>
+    <p class="muted">El catálogo de clientes se llena con los productos que publique el administrador.</p>
+
+    <!-- CATÁLOGO: JS pinta aquí los productos guardados desde el panel de administración. -->
+    <section id="product-catalog" class="product-grid" data-product-list aria-live="polite">
+      <p>Cargando catálogo…</p>
+    </section>
+
+    <!-- CRUD ADMINISTRADOR: formulario para crear/editar y tabla para consultar/desactivar. -->
+    <section class="admin-only admin-product-panel" data-product-admin hidden>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Panel de administración</p>
+          <h2>Gestionar catálogo</h2>
+          <p>Agrega, edita o desactiva los productos que verán tus clientes.</p>
+        </div>
+      </div>
+
+      <form class="form card" data-product-form>
+        <input type="hidden" name="id">
+        <label>Nombre del producto<input name="nombre" required maxlength="140" placeholder="Ej. Panela pulverizada"></label>
+        <label>Descripción<textarea name="descripcion" maxlength="500" placeholder="Describe el producto para tus clientes"></textarea></label>
+        <div class="product-fields-row">
+          <label>Precio (COP)<input name="precio" type="number" min="0" step="1" required></label>
+          <label>Unidades en inventario<input name="stock" type="number" min="0" step="1" required></label>
+        </div>
+        <label>Fotografía del producto<input name="imagen_file" type="file" accept="image/png,image/jpeg,image/webp"><small>Formatos JPG, PNG o WebP; máximo 2 MB en esta demo local.</small></label>
+        <label>Estado del producto<select name="estado"><option value="ACTIVO">Activo · visible en catálogo</option><option value="INACTIVO">Inactivo · oculto</option></select></label>
+        <div class="admin-actions">
+          <button class="button" type="submit">Guardar producto</button>
+          <button type="reset" class="button button-light">Limpiar formulario</button>
+        </div>
+        <p class="notice" aria-live="polite"></p>
+      </form>
+
+      <h2 class="admin-list-title">Productos registrados</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Producto</th><th>Precio</th><th>Stock admin</th><th>Estado</th><th>Acciones CRUD</th></tr></thead>
+          <tbody data-product-table></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>

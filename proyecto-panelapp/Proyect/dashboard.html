@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#df612b">
+  <title>Administración y reportes | PanelApp</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header data-site-header></header>
+  <main class="container section" data-protected>
+    <div class="section-heading dashboard-heading">
+      <div><p class="eyebrow">Panel de control</p><h1>Resumen del negocio</h1><p>Indicadores calculados a partir de los registros de esta demostración local.</p></div>
+      <button class="button" type="button" onclick="window.print()">Imprimir / Guardar PDF</button>
+    </div>
+    <div class="cards dashboard-stats" data-dashboard><p>Cargando indicadores…</p></div>
+    <p class="notice" data-sales-summary aria-live="polite"></p>
+    <p class="report-disclaimer">Nota: los datos se guardan en este navegador. Las ventas cuentan pagos aprobados; no se calcula utilidad porque esta versión no registra costos de compra.</p>
+    <p class="notice" aria-live="polite"></p>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>

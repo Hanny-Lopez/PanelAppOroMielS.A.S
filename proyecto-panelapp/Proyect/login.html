@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#df612b">
+  <title>Ingresar | Panela Oro Miel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header data-site-header></header>
+  <main class="container section narrow auth-page">
+    <p class="eyebrow">Bienvenido a PanelApp</p>
+    <h1>¿Cómo quieres ingresar?</h1>
+    <p class="auth-intro">Elige tu tipo de cuenta. Te mostraremos el acceso correspondiente.</p>
+
+    <!-- Selección inicial del tipo de cuenta; cada opción abre su acceso por rol. -->
+    <section class="role-choice-grid" data-role-choices aria-label="Selecciona el tipo de cuenta">
+      <a class="role-choice card" href="login.html?rol=CLIENTE">
+        <span class="role-symbol" aria-hidden="true">C</span>
+        <span><strong>Soy cliente</strong><small>Quiero ver productos y mis pedidos</small></span>
+        <span class="role-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="role-choice card" href="login.html?rol=ADMIN">
+        <span class="role-symbol admin-symbol" aria-hidden="true">A</span>
+        <span><strong>Soy administrador</strong><small>Quiero gestionar la operación</small></span>
+        <span class="role-arrow" aria-hidden="true">→</span>
+      </a>
+    </section>
+
+    <!-- Formulario de acceso: JavaScript lo muestra cuando se elige un rol. -->
+    <form class="form auth-form" data-auth-form data-action="login" hidden>
+      <p class="role-caption" data-login-role></p>
+      <label>Correo electrónico<input name="correo" type="email" autocomplete="username" required></label>
+      <label>Contraseña<input name="password" type="password" autocomplete="current-password" required minlength="8"></label>
+      <button class="button" type="submit">Ingresar a mi cuenta</button>
+      <p class="notice" aria-live="polite"></p>
+      <a class="back-link" href="login.html" data-role-back>← Elegir otro tipo de cuenta</a>
+    </form>
+
+    <p class="auth-register">¿Aún no tienes cuenta? <a href="registro.html">Crear cuenta local de prueba</a></p>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>
